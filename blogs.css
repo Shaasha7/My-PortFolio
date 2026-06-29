@@ -1,0 +1,570 @@
+/*=========================================
+    GOOGLE FONT
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================================
+    THEME VARIABLES
+=========================================*/
+
+:root{
+
+    --bg:#f5f7fb;
+    --card:#ffffff;
+
+    --text:#111827;
+    --text-light:#6b7280;
+
+    --border:#e5e7eb;
+
+    --primary:#ff8a00;
+    --secondary:#ffb347;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+body.dark{
+
+    --bg:#0f172a;
+    --card:#1e293b;
+
+    --text:#f8fafc;
+    --text-light:#cbd5e1;
+
+    --border:#334155;
+
+    --shadow:0 12px 30px rgba(0,0,0,.35);
+
+}
+
+/*=========================================
+    RESET
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    transition:.35s;
+
+    background-image:
+    linear-gradient(
+        rgba(148,163,184,.12) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(148,163,184,.12) 1px,
+        transparent 1px
+    );
+
+    background-size:58px 58px;
+
+}
+
+body.dark{
+
+    background-image:
+    linear-gradient(
+        rgba(255,255,255,.05) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.05) 1px,
+        transparent 1px
+    );
+
+}
+
+/*=========================================
+    BLOG PAGE
+=========================================*/
+
+.blogs-page{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:120px 30px 80px;
+
+}
+
+/*=========================================
+    HERO
+=========================================*/
+
+.blogs-hero{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.blogs-hero h1{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+    color:var(--text);
+
+}
+
+.blogs-hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+#blogSearch{
+
+    margin-top:30px;
+
+    width:100%;
+    max-width:550px;
+
+    padding:15px 20px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    box-shadow:var(--shadow);
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.35s;
+
+}
+
+#blogSearch::placeholder{
+
+    color:var(--text-light);
+
+}
+
+#blogSearch:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(255,138,0,.15);
+
+}
+
+/*=========================================
+    BLOG GRID
+=========================================*/
+
+.blog-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+}
+/*=========================================
+    BLOG CARD
+=========================================*/
+
+.blog-card{
+
+    background:var(--card);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:var(--shadow);
+
+    border:1px solid var(--border);
+
+    transition:.4s;
+
+}
+
+.blog-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(255,138,0,.18);
+
+}
+
+/*=========================================
+    BLOG IMAGE
+=========================================*/
+
+.blog-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.blog-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*=========================================
+    TAG
+=========================================*/
+
+.blog-tag{
+
+    display:inline-block;
+
+    margin:20px 20px 10px;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+    TITLE
+=========================================*/
+
+.blog-card h3{
+
+    padding:0 20px;
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+    line-height:1.5;
+
+    color:var(--text);
+
+}
+
+/*=========================================
+    DESCRIPTION
+=========================================*/
+
+.blog-desc{
+
+    padding:0 20px;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+/*=========================================
+    META
+=========================================*/
+
+.blog-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 20px;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+/*=========================================
+    READ MORE
+=========================================*/
+
+.read-more{
+
+    display:block;
+
+    padding:15px 20px;
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.read-more:hover{
+
+    color:#ff6d00;
+
+    padding-left:28px;
+
+}
+
+/*=========================================
+    BLOG DETAILS
+=========================================*/
+
+.blog-details{
+
+    display:none;
+
+    padding:22px;
+
+    border-top:1px solid var(--border);
+
+    background:var(--card);
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+}
+
+.blog-details.show{
+
+    display:block;
+
+}
+/*=========================================
+    SMOOTH TRANSITIONS
+=========================================*/
+
+.blog-card,
+.blog-card img,
+.blog-tag,
+.read-more,
+#blogSearch{
+
+    transition:.35s ease;
+
+}
+
+/*=========================================
+    GLASS EFFECT
+=========================================*/
+
+.blog-card{
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+}
+
+/*=========================================
+    PREMIUM HOVER
+=========================================*/
+
+.blog-card:hover{
+
+    border-color:rgba(255,138,0,.35);
+
+}
+
+/*=========================================
+    SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--bg);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(var(--primary),var(--secondary));
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary);
+
+}
+
+/*=========================================
+    TEXT SELECTION
+=========================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/*=========================================
+    RESPONSIVE - TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+    .blogs-page{
+
+        padding:100px 25px 70px;
+
+    }
+
+    .blogs-hero h1{
+
+        font-size:44px;
+
+    }
+
+    .blogs-hero p{
+
+        font-size:17px;
+
+    }
+
+    .blog-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/*=========================================
+    RESPONSIVE - MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+    .blogs-page{
+
+        padding:90px 18px 60px;
+
+    }
+
+    .blogs-hero h1{
+
+        font-size:36px;
+
+    }
+
+    .blogs-hero p{
+
+        font-size:15px;
+
+    }
+
+    #blogSearch{
+
+        width:100%;
+
+    }
+
+    .blog-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .blog-card h3{
+
+        font-size:20px;
+
+    }
+
+}
+
+/*=========================================
+    SMALL DEVICES
+=========================================*/
+
+@media(max-width:480px){
+
+    .blogs-page{
+
+        padding:80px 15px 50px;
+
+    }
+
+    .blogs-hero h1{
+
+        font-size:30px;
+
+    }
+
+    .blogs-hero p{
+
+        line-height:1.7;
+
+    }
+
+    .blog-card img{
+
+        height:220px;
+
+    }
+
+    .blog-meta{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:6px;
+
+    }
+
+}
